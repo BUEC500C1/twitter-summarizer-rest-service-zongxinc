@@ -10,9 +10,11 @@ access_token = ****
 access_secret = ****
 
 ###
-Now the project is made restful, but after submit the file on the website, let's say:0.0.0.0:80, you have to manually add '/file-download' at the end to get to the download site, like: 0.0.0.0:80/file-download.
+Currently the project is available on aws
 
-accessing the through aws via 
+input in following manner: @Username
+
+accessing the web through aws via 
 
 ec2-18-220-92-202.us-east-2.compute.amazonaws.com:5000
 
@@ -20,11 +22,6 @@ or(if above does not work)
 
 18.220.185.253:5000
 
-and then download at 
-
-ec2-18-220-92-202.us-east-2.compute.amazonaws.com:5000/file-download
-
-18.220.185.253:5000/file-download
 
 ![](myimage/ip.png)
 ![](myimage/security.png)
