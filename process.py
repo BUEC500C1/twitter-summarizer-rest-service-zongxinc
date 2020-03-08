@@ -94,12 +94,14 @@ def makevideo(filepath,videoname):
         img=cv2.imread(f'{filepath}'+list[i-1])
         img=cv2.resize(img, (1600,500)) 
         video.write(img)   
-    for e in list:
-        print(e)
-        os.remove(f'{filepath}{e}')
+    # for e in list:
+    #     print(e)
+    #     os.remove(f'{filepath}{e}')
+    os.system(f'rm -r {filepath}')
     for root,dirs,files in os.walk('./'):
         for file in files:
             if file.endswith('.avi'):
+                print(file)
                 path = os.path.join(root, file)
                 shutil.move(path, './video')
                 print('yes')
