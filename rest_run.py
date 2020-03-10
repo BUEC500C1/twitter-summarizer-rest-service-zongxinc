@@ -15,7 +15,10 @@ def my_form():
 def my_form_post():
 	text = request.form['text']
 	processed_text = text. upper()
-	converter.compressVideo([processed_text],10)
+	try:
+		converter.compressVideo([processed_text],10)
+	except:
+		return 'not valid input'
 	for root, directs, files in os.walk('./'):
 		for f in files:
 			if f.endswith('.zip'):
